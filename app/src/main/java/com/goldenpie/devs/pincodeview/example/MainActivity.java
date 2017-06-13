@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity implements Listeners.PinEnte
         pinCodeView.setPinEnteredListener(this);
         pinCodeView.setPinReEnterListener(this);
         pinCodeView.setPinMismatchListener(this);
+
+        pinCodeView.setPasswordManually('1');
+        Toast.makeText(this, "Pin set manually is : " + pinCodeView.getPassword(), Toast.LENGTH_SHORT).show();
+
         drawablePinCodeView.setLockType(LOCK_TYPE.ENTER_PIN);
         drawablePinCodeView.setPinEnteredListener(this);
         drawablePinCodeView.setPinReEnterListener(this);
